@@ -1,141 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>50€ to Wealth | De 50 euros a libertad financiera</title>
-  <meta name="description" content="Aprende a convertir 50€ en un negocio digital rentable. Sin experiencia. Sin riesgos. Resultados reales.">
+  <title>50€ to Wealth | De 50 euros a libertad financiera - El sistema para ingresos pasivos</title>
+  <meta name="description" content="Aprende a convertir 50€ en un negocio digital rentable paso a paso. Descubre 'El Sistema 50€' para generar ingresos pasivos y construir tu libertad financiera.">
+  
+  <link rel="canonical" href="https://50eurostowealth.com/" />
+  <meta name="robots" content="index, follow"> 
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --primary-color: #e53e3e; 
+      --secondary-color: #dd6b20; 
+      --text-color: #2d3748;
+      --bg-light: #f8fafc;
+      --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #2d3748;
-      background: #f8fafc;
-    }
-    h1, h2, h3 { font-weight: 800; line-height: 1.2; }
+    body { font-family: var(--font-family); line-height: 1.6; color: var(--text-color); background: var(--bg-light); }
+    h1, h2, h3 { font-weight: 800; line-height: 1.2; color: #1a202c; }
+    h1 { font-size: clamp(2em, 5vw, 2.8em); }
+    h2 { font-size: clamp(1.8em, 4vw, 2.5em); }
     .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
-    .btn {
-      display: inline-block;
-      background: #e53e3e;
-      color: white;
-      padding: 14px 32px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      text-align: center;
-    }
-    .btn:hover {
-      background: #c53030;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
-    }
     section { padding: 80px 0; }
-    header {
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .text-center { text-align: center; }
+    .btn {
+      display: inline-block; background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none;
+      font-weight: bold; font-size: 1.1em; transition: all 0.3s ease; border: none; cursor: pointer; text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo { font-size: 1.8em; font-weight: 900; color: #e53e3e; }
-    .hero {
-      background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-      text-align: center;
-      padding: 100px 0;
-    }
-    .hero h1 { font-size: 2.8em; margin-bottom: 20px; color: #1a202c; }
+    .btn:hover { background: #c53030; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(229, 62, 62, 0.4); }
+    .btn-white { background: white; color: var(--primary-color); }
+    .btn-white:hover { background: #f0f0f0; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+
+    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.8em; font-weight: 900; color: var(--primary-color); text-decoration: none; }
+    .header-content nav a { margin-left: 10px; padding: 10px 20px; border-radius: 50px; font-size: 0.9em; }
+
+    .hero { background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%); text-align: center; padding: 100px 0; }
+    .hero h1 { margin-bottom: 20px; }
     .hero p { font-size: 1.3em; max-width: 700px; margin: 0 auto 40px; color: #4a5568; }
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-    }
-    .benefit-card {
-      text-align: center;
-      padding: 30px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
+
+    .lead-capture { background: white; text-align: center; }
+    .lead-form { max-width: 500px; margin: 30px auto 0; display: flex; flex-direction: column; gap: 15px; }
+    .lead-form input { padding: 14px; font-size: 1em; border: 1px solid #cbd5e0; border-radius: 8px; text-align: center; }
+    .lead-form button { background: #38a169; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+    .lead-form button:hover { background: #2f855a; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+    .benefit-card { border-top: 5px solid var(--primary-color); }
     .benefit-card:hover { transform: translateY(-8px); }
-    .benefit-card h3 { margin: 20px 0 10px; color: #e53e3e; }
-    .testimonials { background: #f0fdf4; }
-    .testimonial {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin: 20px auto;
-      max-width: 700px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      font-style: italic;
-    }
-    .author { text-align: right; font-weight: bold; color: #2b6cb0; margin-top: 10px; }
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #e53e3e 0%, #dd6b20 100%);
-      color: white;
-      padding: 100px 0;
-    }
-    .cta h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .benefit-icon { font-size: 3em; color: var(--primary-color); display: block; }
+    
+    .content-section { padding: 60px 0; background: #ffffff; }
+    .content-section h2 { margin-bottom: 25px; }
+    .content-section ul { margin: 15px 0 25px 20px; }
+
+    .cta { background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 100px 0; }
     .cta p { font-size: 1.2em; max-width: 700px; margin: 0 auto 40px; }
-    .btn-white {
-      background: white;
-      color: #e53e3e;
-    }
-    .btn-white:hover {
-      background: #f0f0f0;
-    }
-    footer {
-      background: #1a202c;
-      color: #a0aec0;
-      text-align: center;
-      padding: 30px 0;
-    }
+
+    footer { background: #1a202c; color: #a0aec0; text-align: center; padding: 30px 0; }
     footer a { color: #63b3ed; text-decoration: none; margin: 0 10px; }
-    footer a:hover { text-decoration: underline; }
-    .lead-capture {
-      background: white;
-      padding: 60px 0;
-      text-align: center;
-    }
-    .lead-form {
-      max-width: 500px;
-      margin: 30px auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .lead-form input {
-      padding: 14px;
-      font-size: 1em;
-      border: 1px solid #cbd5e0;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .lead-form button {
-      background: #38a169;
-      color: white;
-      border: none;
-      padding: 14px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+    .legal-content { max-width: 800px; margin: 0 auto; padding-top: 40px; }
+    
     @media (max-width: 600px) {
-      .hero h1 { font-size: 2em; }
-      .hero p { font-size: 1.1em; }
+      .hero { padding: 60px 0; }
+      .header-content nav a { margin-left: 5px; padding: 8px 15px; }
     }
   </style>
 </head>
@@ -143,15 +77,19 @@
 
   <header>
     <div class="container header-content">
-      <div class="logo">50€ to Wealth</div>
-      <a href="#comprar" class="btn">¡Empieza Ahora!</a>
+      <a href="index.html" class="logo">50€ to Wealth</a>
+      <nav>
+          <a href="tienda.html" class="btn" style="background: #38a169; margin-right: 5px;">Tienda</a>
+          <a href="blog.html" class="btn" style="background: #38a169; margin-right: 5px;">Blog</a>
+          <a href="#comprar" class="btn">Sistema 50€</a>
+      </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="inicio">
     <div class="container">
-      <h1>¿Y si con solo 50€ pudieras construir tu libertad financiera?</h1>
-      <p>No necesitas experiencia, ni miles de euros. Solo el sistema correcto. Descubre cómo miles de hispanohablantes están generando ingresos pasivos desde casa.</p>
+      <h1>¿Y si con solo 50€ pudieras construir tu **libertad financiera**?</h1>
+      <p>No necesitas experiencia, ni miles de euros. Solo el **sistema correcto**. Descubre cómo miles de hispanohablantes están generando **ingresos pasivos** desde casa, escalando desde una inversión mínima.</p>
       <a href="#comprar" class="btn">Sí, quiero mi sistema →</a>
     </div>
   </section>
@@ -159,8 +97,7 @@
   <section class="lead-capture">
     <div class="container">
       <h2>¿Quieres ver una clase gratis antes de comprar?</h2>
-      <p>Recibe ahora la <strong>Guía Gratuita: 3 Ideas para Ganar con 50€</strong></p>
-      <!-- Formulario de MailerLite (reemplaza con tu código) -->
+      <p>Recibe ahora la **Guía Gratuita: 3 Ideas para Ganar con 50€** directamente en tu correo.</p>
       <form class="lead-form" action="https://assets.mailerlite.com/jsonp/000000/forms/000000/subscriptions.jsonp" data-code="000000" method="post" target="_blank">
         <input type="email" name="fields[email]" placeholder="Tu email" required />
         <button type="submit">Enviar guía gratis</button>
@@ -170,45 +107,78 @@
 
   <section class="benefits">
     <div class="container">
-      <h2 style="text-align:center; font-size:2.2em; margin-bottom:20px;">¿Qué incluye <strong>El Sistema 50€</strong>?</h2>
+      <h2 class="text-center" style="margin-bottom:40px;">¿Qué incluye **El Sistema 50€**?</h2>
       <div class="benefits-grid">
         <div class="benefit-card">
-          <h3>✅ Paso a paso</h3>
-          <p>Guías en PDF para crear tu primer activo digital en 7 días.</p>
+          <span class="benefit-icon">🚀</span>
+          <h3>Paso a paso guiado</h3>
+          <p>Instrucciones detalladas en PDF para crear tu primer **activo digital** en solo 7 días, estructurado y sin rodeos.</p>
         </div>
         <div class="benefit-card">
-          <h3>🌐 5 modelos probados</h3>
-          <p>Blogs monetizados, tiendas mini, contenido automatizado, SaaS simples y más.</p>
+          <span class="benefit-icon">💡</span>
+          <h3>5 modelos probados</h3>
+          <p>Accede a estrategias de **monetización probadas**: blogs de nicho, tiendas mini, contenido automatizado, y SaaS simples.</p>
         </div>
         <div class="benefit-card">
-          <h3>🔒 Sin riesgos</h3>
-          <p>Inviertes solo 50€. Si no ves resultados en 30 días, te devolvemos tu dinero.</p>
+          <span class="benefit-icon">🛡️</span>
+          <h3>Garantía Sin Riesgos</h3>
+          <p>Inviertes solo 50€. Si no ves cómo generar tus primeras ganancias en **30 días**, te devolvemos tu dinero.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="testimonials">
-    <div class="container">
-      <h2 style="text-align:center; font-size:2.2em; margin-bottom:40px;">Lo que dicen quienes ya lo usan</h2>
-      <div class="testimonial">
-        <p>"Con 47€ y este sistema, lancé un blog que ahora me da 300€/mes. ¡Sin saber programar!"</p>
-        <div class="author">— Carla M., Madrid</div>
+  
+  <section class="content-section">
+      <div class="container">
+          <h2>La Filosofía detrás de 50€ to Wealth</h2>
+          <p>La barrera más grande para el emprendimiento digital es el **miedo a la inversión inicial**. Nosotros hemos demostrado que es posible empezar con el coste mínimo de un dominio y un hosting (aproximadamente 50€) y construir un **negocio escalable**.</p>
+          <p>Este sistema se enfoca en la creación de **activos digitales** que generen ingresos de forma automática o semi-automática, permitiéndote recuperar tu inversión rápidamente y empezar a construir un verdadero **ingreso pasivo**. No vendemos humo, vendemos un **método**.</p>
+          
+          <h3>¿Por qué esta estrategia es efectiva?</h3>
+          <ul>
+              <li>**Bajo Coste:** Mantiene el riesgo en el mínimo. Tu capital inicial es solo de 50€.</li>
+              <li>**Escalabilidad:** Una vez que el primer activo genera ingresos, puedes reinvertir para crear el segundo y el tercero.</li>
+              <li>**Enfoque en Activos:** Te enseñamos a construir **propiedades digitales** (webs, herramientas, blogs) que trabajan por ti 24/7.</li>
+          </ul>
       </div>
-      <div class="testimonial">
-        <p>"Dejé mi trabajo en 6 meses. Todo empezó con una inversión de 50€ en una plantilla y hosting."</p>
-        <div class="author">— Diego R., México</div>
-      </div>
-    </div>
   </section>
 
   <section class="cta" id="comprar">
     <div class="container">
       <h2>¿Listo para tu transformación?</h2>
-      <p>Por solo <strong>47€</strong>, obtienes el sistema completo + acceso a la comunidad privada + actualizaciones de por vida.</p>
-      <!-- REEMPLAZA ESTE ENLACE CON TU ENLACE DE GUMROAD -->
+      <p>Por solo **47€** (un solo pago), obtienes el sistema completo + acceso a la comunidad privada + actualizaciones de por vida.</p>
       <a href="https://gum.co/tu-enlace-aqui" class="btn btn-white">👉 Comprar ahora (47€)</a>
       <p style="margin-top:20px; font-size:0.9em;">Pago seguro • Garantía de 30 días • Soporte en español</p>
+    </div>
+  </section>
+  
+  <section class="content-section" id="aviso-legal">
+    <div class="container legal-content">
+      <h2>Aviso Legal</h2>
+      <p>El presente Aviso Legal regula el acceso y el uso del sitio web **50eurostowealth.com** (en adelante, el "Sitio Web").</p>
+      <h3>1. Información General</h3>
+      <p>Este Sitio Web es propiedad de **Carlos Alberto Peña Ventura** (en adelante, el "Titular"), con NIF/CIF **42179345J** y domicilio en **calle Lomitos de Arriba, 38 San Andrés y Sauces**.</p>
+      <p>Correo electrónico de contacto: **50eurostowealth@gmail.com**.</p>
+      <h3>3. Exención de Responsabilidad y Garantía de Ingresos</h3>
+      <p>**50eurostowealth.com no garantiza la obtención de resultados económicos concretos.** El éxito de los métodos y estrategias descritos en 'El Sistema 50€' depende de la dedicación, esfuerzo y capacidad del usuario. El usuario asume toda responsabilidad por sus decisiones de inversión.</p>
+      <h3>5. Ley Aplicable y Jurisdicción</h3>
+      <p>Cualquier controversia relativa al Sitio Web se regirá por la ley española, y las partes se someterán a la jurisdicción de los Juzgados y Tribunales de **Santa Cruz de La Palma**.</p>
+      <p style="color: red; font-weight: bold;">ADVERTENCIA LEGAL: Este documento es un borrador. Asegúrese de que cumple con la legislación vigente en España (LSSI-CE, GDPR) y consulte a un profesional.</p>
+    </div>
+  </section>
+  
+  <section class="content-section" id="privacidad" style="background: #f0fdf4;">
+    <div class="container legal-content">
+      <h2>Política de Privacidad y Protección de Datos</h2>
+      <p>El Titular cumple con las directrices de la normativa vigente en protección de datos personales (GDPR).</p>
+      <h3>1. Responsable del Tratamiento</h3>
+      <p>El responsable del tratamiento de sus datos personales es **Carlos Alberto Peña Ventura**, con email **50eurostowealth@gmail.com**.</p>
+      <h3>3. Legitimación para el Tratamiento</h3>
+      <p>La legitimación se basa en **el consentimiento** del usuario (al suscribirse o comprar) y en la **ejecución de un contrato** (al realizar la compra del producto).</p>
+      <h3>4. Destinatarios de los Datos</h3>
+      <p>Sus datos solo se cederán a terceros para la correcta prestación del servicio o por obligación legal: Plataformas de pago (Gumroad/PayPal), servicio de email (MailerLite).</p>
+      <h3>5. Derechos del Usuario</h3>
+      <p>Puede ejercer sus derechos de acceso, rectificación, cancelación, oposición, limitación del tratamiento y portabilidad enviando un correo a **50eurostowealth@gmail.com**.</p>
     </div>
   </section>
 
@@ -218,23 +188,18 @@
       <p>
         <a href="#aviso-legal">Aviso legal</a> • 
         <a href="#privacidad">Política de privacidad</a> • 
-        <a href="mailto:soporte@50eurostowealth.com">Contacto</a>
+        <a href="mailto:50eurostowealth@gmail.com">Contacto</a>
       </p>
-      <p>Hecho con ❤️ para emprendedores digitales hispanohablantes.</p>
-      
-      <!-- Aviso Legal (resumen) -->
-      <div id="aviso-legal" style="display:none;">
-        <h3>Aviso Legal</h3>
-        <p>50eurostowealth.com es un sitio propiedad de [Tu Nombre], con domicilio en [Tu Ciudad]. Los productos son digitales y no requieren envío físico. Los pagos se procesan a través de terceros (Gumroad, PayPal). No se garantizan ingresos específicos.</p>
-      </div>
-      
-      <!-- Política de Privacidad (resumen) -->
-      <div id="privacidad" style="display:none;">
-        <h3>Política de Privacidad</h3>
-        <p>Recopilamos solo tu email para enviarte el producto y novedades. Nunca compartimos tus datos. Puedes darte de baja en cualquier momento.</p>
-      </div>
     </div>
   </footer>
-
+  
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+  </script>
 </body>
 </html>
