@@ -1,0 +1,17 @@
+import { useState } from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+
+const agents=[['DIRECTOR','Coordina y decide'],['RESEARCH','Busca evidencia'],['PRODUCT','Diseña soluciones'],['GROWTH','Encuentra distribución'],['SALES','Optimiza la oferta'],['FINANCE','Mide economía y riesgo'],['ENGINEERING','Construye'],['LEGAL / RISK','Busca riesgos'],['SKEPTIC','Intenta destruir la idea'],['OPERATIONS','Convierte decisiones en acciones']];
+
+export default function Home(){
+ const [mission,setMission]=useState(''); const [started,setStarted]=useState(false);
+ return <ScrollView style={s.bg} contentContainerStyle={s.wrap}>
+  <Text style={s.kicker}>ORBIT · MULTI-AGENT LAB</Text><Text style={s.title}>No queremos respuestas bonitas.</Text>
+  <Text style={s.sub}>Queremos decisiones que sobrevivan a expertos que intentan demostrar que estamos equivocados.</Text>
+  <View style={s.card}><Text style={s.label}>NUEVA MISIÓN</Text><TextInput value={mission} onChangeText={setMission} placeholder="Ej.: convertir 50€ en 100€" placeholderTextColor="#64748b" style={s.input}/><Pressable disabled={!mission.trim()} onPress={()=>setStarted(true)} style={[s.button,!mission.trim()&&s.disabled]}><Text style={s.buttonText}>{started?'MISIÓN INICIADA':'LANZAR EQUIPO'}</Text></Pressable></View>
+  <Text style={s.section}>CONSEJO DE EXPERTOS</Text>{agents.map(([a,d])=><View style={s.agent} key={a}><View style={s.dot}/><View><Text style={s.agentName}>{a}</Text><Text style={s.agentDesc}>{d}</Text></View></View>)}
+  {started&&<View style={s.result}><Text style={s.section}>ESTADO</Text><Text style={s.resultTitle}>Equipo desplegado</Text><Text style={s.resultText}>Los especialistas analizarán la misión de forma independiente. El Director solo podrá recomendar una acción cuando haya evidencia suficiente. Ningún resultado se marcará como ejecutado sin confirmación.</Text></View>}
+  <Text style={s.footer}>v0.1 · Las acciones financieras requieren aprobación humana.</Text>
+ </ScrollView>
+}
+const s=StyleSheet.create({bg:{flex:1,backgroundColor:'#070b14'},wrap:{padding:24,paddingTop:64,paddingBottom:60},kicker:{color:'#60a5fa',fontSize:12,fontWeight:'800',letterSpacing:2},title:{color:'#f8fafc',fontSize:38,fontWeight:'900',lineHeight:42,marginTop:12},sub:{color:'#94a3b8',fontSize:16,lineHeight:24,marginTop:14},card:{backgroundColor:'#111827',borderColor:'#243244',borderWidth:1,borderRadius:20,padding:18,marginTop:28},label:{color:'#94a3b8',fontSize:11,fontWeight:'800',letterSpacing:1},input:{backgroundColor:'#0b1220',borderColor:'#334155',borderWidth:1,borderRadius:12,padding:14,color:'#fff',marginTop:10,fontSize:16},button:{backgroundColor:'#f8fafc',padding:15,borderRadius:12,marginTop:12,alignItems:'center'},disabled:{opacity:.4},buttonText:{color:'#0b1220',fontWeight:'900'},section:{color:'#94a3b8',fontSize:11,fontWeight:'900',letterSpacing:1.5,marginTop:30,marginBottom:12},agent:{flexDirection:'row',alignItems:'center',paddingVertical:11,borderBottomColor:'#172033',borderBottomWidth:1},dot:{width:9,height:9,borderRadius:5,backgroundColor:'#60a5fa',marginRight:13},agentName:{color:'#f1f5f9',fontWeight:'800',fontSize:14},agentDesc:{color:'#64748b',fontSize:13,marginTop:2},result:{backgroundColor:'#0f172a',borderRadius:18,padding:18,marginTop:18},resultTitle:{color:'#f8fafc',fontSize:20,fontWeight:'800'},resultText:{color:'#94a3b8',lineHeight:22,marginTop:8},footer:{color:'#475569',fontSize:11,marginTop:30,textAlign:'center'}});
