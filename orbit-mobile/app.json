@@ -1,0 +1,1 @@
+{"expo":{"name":"ORBIT","slug":"orbit-mobile","version":"0.1.0","orientation":"portrait","scheme":"orbit","userInterfaceStyle":"automatic","ios":{"supportsTablet":true,"bundleIdentifier":"com.50eurostowealth.orbit"},"android":{"package":"com.50eurostowealth.orbit"},"web":{"bundler":"metro"},"plugins":["expo-router"]}}
